@@ -1,0 +1,237 @@
+{"plugins" : [
+	{
+		"name" : "User Avatar and Server Icon Viewer",
+		"description" : "Allows you to view server icons, user avatars, and emotes in fullscreen via the context menu. You may also directly copy the image URL or open the URL externally.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/AvatarIconViewer.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/AIC/Preview/",
+		"flags" : {}
+	},
+	{
+		"name" : "Idle Guildlist Scroller",
+		"description" : "Automatically scrolls to the top of the guilds list after the specified amount of time that your mouse isn't over it.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/IdleGuildlistScroller.plugin.js",
+		"flags" : {
+			"requested" : true
+		}
+	},
+	{
+		"name" : "Voice Chat Mute Sounds",
+		"description" : "Enables the mute and unmute sound for all users in a voice call when the server/group is selected.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/VCMuteSounds.plugin.js",
+		"flags" : {
+			"deprecated" : true
+		}
+	},
+	{
+		"name" : "User Birthdays",
+		"description" : "Allows you to set birthdays for users and get notified when it's a user's birthday.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/UserBirthdays.plugin.js",
+		"flags" : {}
+	},
+	{
+		"name" : "Emote Zoom",
+		"description" : "Increases the size of emotes and emojis upon hovering over them and allows you to change their default sizes.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/BetterEmoteSizes.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/BES/Preview/",
+		"flags" : {}
+	},
+	{
+		"name" : "The Clap Best Clap Plugin Clap Ever",
+		"description" : "Literally the most useless and cancerous plugin ever. Put \"clapclap:\" at the first of your message to replace spaces with clap emojis. You can also do \"clapclap(some_emote_name):\" to use custom emotes, \"superclapclap\" for every character instead of every space, \"ra:\" to replace all characters with regional indicators, \"reverse:\" to reverse the message, and \"owo:\" for pure cancer.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/TheClapBestClapPluginClapEver.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/BPECC/Preview/",
+		"note" : "Will conflict with most chatbox-modifying plugins when using a command.",
+		"flags" : {}
+	},
+	{
+		"name" : "Mention Aliases",
+		"description" : "Allows you to set an alias for users that you can @mention them with. You also have the choice to display their alias next to their name. A use example is setting your friends' aliases as their first names. Only replaces the alias with the mention if the user is in the server you mention them in.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/MentionAliases.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/MA/Preview/",
+		"note" : "You can also do @owner to mention the owner of a guild.",
+		"flags" : {}
+	},
+	{
+		"name" : "Guild Counter",
+		"description" : "Displays a guild counter below the online friend counter.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/GuildCounter.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/GC/Preview/",
+		"flags" : {}
+	},
+	{
+		"name" : "View Guild Relationships",
+		"description" : "Adds a 'View Relationships' button to the guild dropdown menu that opens a list of all friends, requested friends, and blocked users in the server.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/ViewGuildRelationships.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/VGR/Preview/",
+		"flags" : {}
+	},
+	{
+		"name" : "Guild And Friend Removal Alerts",
+		"description" : "Alerts you when a guild or friend is removed.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/GuildAndFriendRemovalAlerts.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/GFRA/Preview/",
+		"flags" : {}
+	},
+	{
+		"name" : "Customizable Avatar DPI",
+		"description" : "Allows you to change the DPI of user avatars, to reduce bluriness with themes that increase the size of them.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/CustomizableAvatarDPI.plugin.js",
+		"flags" : {
+			"requested" : true
+		}
+	},
+	{
+		"name" : "Transitioning Backgrounds",
+		"description" : "Allows you to set a list of backgrounds that will be transitioned between with several transition types, in order, or at random.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/TransitioningBackgrounds.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/TB/Preview/",
+		"flags" : {}
+	},
+	{
+		"name" : "Formattable Message Copier",
+		"description" : "Allows you to select messages in a chat to copy them in a customizable format. Double click the top of a message group to select it, then shift click to the next point to select all message groups between, or ctrl click another message group to append a single group to the selection.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/FormattableMessageCopier.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/FMC/Preview/",
+		"flags" : {}
+	},
+	{
+		"name" : "Selected Channel Notifications",
+		"description" : "Plays a sound and displays a notification (both optional) when Discord is minimized and a message is received in the selected channel.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/SelectedChannelNotifications.plugin.js",
+		"flags" : {}
+	},
+	{
+		"name" : "Send BD Emotes",
+		"description" : "Allows you to enclose Better Discord emotes in square brackets to send them as a higher resolution link that all users can see.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/SendBDEmotes.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/SBDE/Preview/",
+		"flags" : {}
+	},
+	{
+		"name" : "Share Button",
+		"description" : "Allows you to easily share images, videos, links and messages to other channels and servers via the context menu and message dropdown menu.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/ShareButton.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/SB/Preview/",
+		"flags" : {}
+	},
+	{
+		"name" : "Save To",
+		"description" : "Allows you to save images, videos, files, server icons and user avatars to your defined folders, or browse to a folder, via the context menu.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/SaveTo.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/ST/Preview/",
+		"flags" : {}
+	},
+	{
+		"name" : "Voice Chat Notifications",
+		"description" : "Displays notifications when users connect to/disconnect from, mute/unmute themselves, and deafen/undeafen themselves in the voice channel you're in.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/VoiceChatNotifications.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/VCN/Preview/",
+		"note" : "Default keybind to open the voice log is Control/Command + V.",
+		"flags" : {}
+	},
+	{
+		"name" : "Send Links Directly",
+		"description" : "Allows you to enclose direct links in square brackets to upload them directly, instead of sending a link.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/SendLinksDirectly.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/SLD/Preview/",
+		"note" : "Example usage: [https://static-cdn.jtvnw.net/emoticons/v1/521050/4.0, forsenE.png]",
+		"flags" : {}
+	},
+	{
+		"name" : "Message Logger",
+		"description" : "Records all sent messages, message edits and message deletions in the specified servers, all unmuted servers or all servers, and all direct messages.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/MessageLogger.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/ML/Preview/",
+		"note" : "Default keybind for opening the log is Control/Command + M, and the default keybind for opening the log filtered to the selected channel is Control/Command + Alt + M.",
+		"flags" : {}
+	},
+	{
+		"name" : "Open Links In Discord",
+		"description" : "Opens links in a new window in Discord, instead of in your web browser.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/MessageLogger.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/OLID/Preview/",
+		"note" : "You can hold shift (default) to open links normally.",
+		"flags" : {}
+	},
+	{
+		"name" : "Auto Correct",
+		"description" : "Automatically replaces misspelled words with the first correction, with optional automatic capitalization and punctuation. Requires either Windows 8 or above, Mac, or DevilBro's SpellCheck plugin.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/AutoCorrect.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/AC/Preview/",
+		"requester" : "Bob Bunny80",
+		"flags" : {
+			"requested" : true
+		}
+	},
+	{
+		"name" : "Reaction Images",
+		"description" : "Allows you to set reaction image folders and send reaction images with 'Folder Name/reaction image name'.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/ReactionImages.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/RA/Preview/",
+		"flags" : {}
+	},
+	{
+		"name" : "BD Emote Auto-complete",
+		"description" : "Adds an auto-complete menu for BetterDiscord emotes.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/BDEmoteAutocomplete.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/BDEA/Preview/",
+		"flags" : {
+			"requested" : true
+		}
+	},
+	{
+		"name" : "Unread Count Badges",
+		"description" : "Adds an unread count badge on unread servers and channels.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/UnreadCountBadges.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/UCB/Preview/",
+		"flags" : {}
+	},
+	{
+		"name" : "Auto Refresh Settings Panel",
+		"description" : "Automatically refreshes the BetterDiscord plugin settings panel when clicking into Discord, making developing settings menus 1,000x faster if you have a lot of plugins.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/AutoRefreshSettingsPanel.plugin.js",
+		"flags" : {}
+	},
+	{
+		"name" : "Pin Plugins And Themes",
+		"description" : "Allows you to pin plugins and themes via the context menu.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/PinPluginsAndThemes.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/PPT/Preview/",
+		"flags" : {}
+	},
+	{
+		"name" : "Detailed Server Tooltips",
+		"description" : "Displays a more detailed tooltip for servers similar to user popouts. Contains a larger image, owner's tag, date and time created, date and time joined, how many days ago joined, member count, channel count, role count, region, and whether or not the server is partnered.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/DetailedServerTooltips.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/DST/Preview/",
+		"flags" : {}
+	}
+],
+"themes" : [
+	{
+		"name" : "Tom's Theme",
+		"description" : "My personal theme, for anyone interested from my screenshots.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordThemes/blob/master/TomsThemeSource.theme.css",
+		"flags" : {
+			"unfinished" : true
+		}
+	},
+	{
+		"name" : "Better Light Theme",
+		"description" : "Improves the light theme, making it actually light.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordThemes/blob/master/BetterLightTheme.theme.css",
+		"requester" : "Velizar",
+		"flags" : {
+			"requested" : true
+		}
+	}
+],
+"bots" : [
+	{
+		"name" : "Relatable Bot",
+		"description" : "Need a highly annoying discount Dad Bot? Then add Relatable Bot™ to your server today! <span style=\"font-size:10px;font-style:italic\">Patent pending.</span>",
+		"source" : "https://github.com/Metalloriff/RelatableBot/blob/master/relatable-bot.js",
+		"inviteLink" : "https://discordapp.com/api/oauth2/authorize?client_id=431835277992919040&permissions=604097600&scope=bot",
+		"flags" : {}
+	}
+]}
