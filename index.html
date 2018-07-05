@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+	<link href="styles.css" rel="stylesheet"/>
+	<script src="main.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+	<script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
+</head>
+
+<body id="root" onload="start();">
+	<header style="z-index:2;" onmouseover="clearTimeout(hideHeaderButtonsTimeout);this.nextElementSibling.style.transform = 'translateX(-50%)';" onmouseout="this.nextElementSibling.style.transform = '';">
+		<h1>Tom's Discord Stuff</h1>
+	</header>
+	<div class="header-buttons" style="transform:translateX(-50%);">
+		<input id="filter-bar" placeholder="Filter..." oninput="updateSearchFilter(this.value);"/>
+		<a class="header-button" href="https://discord.gg/yNqzuJa">Join Support Server</a>
+		<a class="header-button" href="">My GitHub Page</a>
+		<span class="header-button" onmouseover="this.innerText = 'Metalloriff#2891';" onmouseout="this.innerText = 'My Discord Tag';">My Discord Tag</span>
+	</div>
+	<div class="item-list">
+		<div class="divider-label plugin">Plugins</div>
+		<div class="divider plugins"> </div>
+		<div class="divider-label theme">Themes</div>
+		<div class="divider themes"> </div>
+		<div class="divider-label bot">Bots</div>
+		<div class="divider bots"> </div>
+	</div>
+	<footer>
+		<h3>Note: This site is still a work in progress. If you have any suggestions or complaints, please let me know.</h3>
+		<span class="material-icons close-button" onclick="window.localStorage.setItem('footerNoticeClosed', 'true'); this.parentElement.remove();">close</span>
+	</footer>
+</body>
+
+</html>
