@@ -1,0 +1,12 @@
+[class*=userPopout] [class*=avatarWrapper], [class*=userPopout] [class*=wrapper], [class*=userPopout] [class*=avatarWrapper] > :first-child > :first-child, [class*=userPopout] [class*=avatarHint-] {
+	width: 230px;
+	height: 230px;
+	background-color: rgba(0,0,0,0.5);
+	-webkit-mask: none;
+	border-radius: 5px;
+	margin: 0px;
+}
+[class*=userPopout] [class*=avatarWrapper] {
+	top: -10px;
+	margin-bottom: 5px;
+}

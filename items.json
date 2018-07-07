@@ -226,6 +226,69 @@
 		}
 	}
 ],
+"cssSnippets" : [
+	{
+		"name" : "Guildlist Scrollbar",
+		"description" : "Adds a scrollbar to the guildlist/serverlist.",
+		"filename" : "GuildlistScrollbar.theme.css",
+		"previews" : ["https://i.imgur.com/DWkL1i7.png"],
+		"flags" : {}
+	},
+	{
+		"name" : "Rounded Square Avatars",
+		"description" : "Replaces all avatars with rounded squares. (5px rounding)",
+		"filename" : "RoundedSquareAvatars.theme.css",
+		"previews" : ["https://i.imgur.com/HvXwsXk.png", "https://i.imgur.com/RtcFRXm.png", "https://i.imgur.com/kI5JpAV.png"],
+		"flags" : {}
+	},
+	{
+		"name" : "Rounded Square Border Statuses",
+		"description" : "Replaces all statuses with rounded square borders around the user avatars. (5px rounding)",
+		"filename" : "RoundedSquareBorderStatuses.theme.css",
+		"previews" : ["https://i.imgur.com/3XefPRy.png", "https://i.imgur.com/M0C83Fa.png"],
+		"flags" : {}
+	},
+	{
+		"name" : "Larger User Popout Avatars",
+		"description" : "Sizes the user popout avatar to evenly fit in the popout.",
+		"filename" : "LargerUserPopoutAvatars.theme.css",
+		"previews" : ["https://i.imgur.com/Whyooej.png"],
+		"flags" : {}
+	},
+	{
+		"name" : "Blur User Discriminators",
+		"description" : "Blurs user discriminators (#XXXX) and unblurs them on hover.",
+		"filename" : "BlurUserDiscriminators.theme.css",
+		"flags" : {}
+	},
+	{
+		"name" : "Rounded Square Guild Icons",
+		"description" : "Replaces all guild/server icons with rounded squares.",
+		"filename" : "RoundedSquareGuildIcons.theme.css",
+		"previews" : ["https://i.imgur.com/2cxlVk0.png"],
+		"flags" : {}
+	},
+	{
+		"name" : "Larger Chat Avatars",
+		"description" : "Increases the size of chat avatars to 70px.",
+		"filename" : "LargerChatAvatars.theme.css",
+		"previews" : ["https://i.imgur.com/IvPrndx.png", "https://i.imgur.com/nGxymdD.png"],
+		"flags" : {}
+	},
+	{
+		"name" : "Memberlist Avatars On Right",
+		"description" : "Displays avatars on the right instead of left in the memberlist.",
+		"filename" : "MemberlistAvatarsOnRight.theme.css",
+		"previews" : ["https://i.imgur.com/KG3yUgY.png"],
+		"flags" : {}
+	},
+	{
+		"name" : "More Popout Backdrops",
+		"description" : "Adds backdrops to most popouts (user popouts, emoji picker, etc.) similar to the backdrop on user profiles and the image viewer.",
+		"filename" : "MorePopoutBackdrops.theme.css",
+		"flags" : {}
+	}
+],
 "bots" : [
 	{
 		"name" : "Relatable Bot",

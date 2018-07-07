@@ -55,7 +55,7 @@ function buildItemsList() {
 				<div class="item-action-buttons">
 					<span class="material-icons item-action-button has-tooltip" data-tooltip="More info">more_horiz</span>
 					<a class="material-icons item-action-button has-tooltip" data-tooltip="GitHub source" href="${item.source}">code</a>
-					<a class="material-icons item-action-button has-tooltip " data-tooltip="Download" onclick="window.open('https://betterdiscord.net/ghdl/?url=${item.source}');">get_app</a>
+					<a class="material-icons item-action-button has-tooltip" data-tooltip="Download" onclick="window.open('https://betterdiscord.net/ghdl/?url=${item.source}');">get_app</a>
 				</div>
 				<span class="item-idx-label">#${i + 1}</span>
 			`;
@@ -65,6 +65,35 @@ function buildItemsList() {
 			actionButtons[0].onclick = () => openPop(item, "theme");
 			insertFlags(item, element.getElementsByClassName("item-flags")[0]);
 			themes.appendChild(element);
+		}
+
+		let snippets = document.getElementsByClassName("divider css-snippet")[0];
+
+		for(let i = items.cssSnippets.length - 1; i > -1; i--) {
+			const item = items.cssSnippets[i];
+			let element = document.createElement("div");
+			element.classList.add("item", "css-snippet");
+			element.innerHTML = `
+				<div class="item-name">${item.name}</div>
+				<div class="item-flags"></div>
+				<div class="item-description">${item.description}</div>
+				<div class="item-action-buttons">
+					<span class="material-icons item-action-button has-tooltip" data-tooltip="More info">more_horiz</span>
+					<span class="material-icons item-action-button has-tooltip" data-tooltip="Reveal code" onclick="fetch('./css-snippets/${item.filename}').then(d => d.text()).then(c => {
+						const desc = this.parentElement.parentElement.getElementsByClassName('item-description')[0];
+						desc.innerText = c;
+						desc.classList.add('select');
+					})">code</span>
+					<span class="material-icons item-action-button has-tooltip" data-tooltip="Download as theme" onclick="fetch('./css-snippets/${item.filename}').then(d => d.text()).then(c => saveAs(new Blob([c], { type : 'text/css' }), '${item.filename}'))">get_app</span>
+				</div>
+				<span class="item-idx-label">#${i + 1}</span>
+			`;
+			element.dataset.name = item.name;
+			element.dataset.idx = i + 1;
+			let actionButtons = element.getElementsByClassName("item-action-button"), actionTooltip = element.getElementsByClassName("item-action-tooltip")[0];
+			actionButtons[0].onclick = () => openPop(item, "css-snippet");
+			insertFlags(item, element.getElementsByClassName("item-flags")[0]);
+			snippets.appendChild(element);
 		}
 
 		let bots = document.getElementsByClassName("divider bots")[0];
@@ -115,7 +144,7 @@ function ready() {
 		let variable = args[i].split("=")[0], value = args[i].split("=")[1];
 		if(!variable && !value) continue;
 		value = value.split("-").join(" ");
-		if(variable == "plugin" || variable == "theme" || variable == "bot") {
+		if(variable == "plugin" || variable == "theme" || variable == "bot" || variable == "css-snippet") {
 			const field = document.getElementById("filter-bar");
 			field.value = value;
 			updateSearchFilter(value);
@@ -154,7 +183,7 @@ function openPop(item, type) {
 				<div class="popout-label" style="margin-top:20px;">${item.note ? "Note: " + item.note : ""}</div>
 				<div class="popout-label popout-button" style="margin-top:50px;">Source</div>
 				<div class="popout-label popout-button">Download</div>
-				<div class="preview-images">
+				<div class="preview-images" style="margin-top:-5px">
 					<div class="popout-label" style="position:absolute;top:-25px;">Fetching previews...</div>
 					<div class="scroll-wrapper"><div class="scroller" data-simplebar></div></div>
 				</div>
@@ -188,37 +217,47 @@ function openPop(item, type) {
 		const version = data.substring(data.indexOf("getVersion"), data.length).match(/"[0-9].[0-9].[0-9]"/)[0].split("\"").join("");
 		document.getElementById("popout-item-version").innerText = "Version: v" + version;
 	});
+	const appendPreviewImage = (url, i) => {
+		switch(url.split(".")[url.split(".").length - 1]) {
+			case "png":
+			case "jpg":
+			case "jpeg":
+			case "gif": {
+				let img = document.createElement("div");
+				img.classList.add("preview-image");
+				img.style.backgroundImage = "url(" + url + ")";
+				img.addEventListener("click", () => openImagePreview(url));
+				window.getElementsByClassName("simplebar-content")[0].appendChild(img);
+				previewLabel.innerText = "Previews (" + (i + 1) + ")";
+				break;
+			}
+			case "mp4": {
+				let vid = document.createElement("div");
+				vid.classList.add("preview-image");
+				vid.innerHTML = `<div class="material-icons play-button">play_circle_filled_white</div>`;
+				vid.addEventListener("click", () => openVideoPreview(url));
+				window.getElementsByClassName("simplebar-content")[0].appendChild(vid);
+				previewLabel.innerText = "Previews (" + (i + 1) + ")";
+				break;
+			}
+		}
+	};
 	if(item.preview) {
 		fetch(item.preview + "README.md").then(r => r.text()).then(data => {
 			previewLabel.style.top = "-15px";
 			const images = Array.filter(data.split("(").join(")").split(")"), i => i.indexOf(".") != -1);
 			for(let i = 0; i < images.length; i++) {
 				clearTimeout(imageFailTimeout);
-				switch(images[i].split(".")[1]) {
-					case "png":
-					case "jpg":
-					case "jpeg":
-					case "gif": {
-						let img = document.createElement("div");
-						img.classList.add("preview-image");
-						img.style.backgroundImage = "url(" + item.preview + images[i] + ")";
-						img.addEventListener("click", () => openImagePreview(item.preview + images[i]));
-						window.getElementsByClassName("simplebar-content")[0].appendChild(img);
-						previewLabel.innerText = "Previews (" + (i + 1) + ")";
-						break;
-					}
-					case "mp4": {
-						let vid = document.createElement("div");
-						vid.classList.add("preview-image");
-						vid.innerHTML = `<div class="material-icons play-button">play_circle_filled_white</div>`;
-						vid.addEventListener("click", () => openVideoPreview(item.preview + images[i]));
-						window.getElementsByClassName("simplebar-content")[0].appendChild(vid);
-						previewLabel.innerText = "Previews (" + (i + 1) + ")";
-						break;
-					}
-				}
+				appendPreviewImage(item.preview + images[i], i);
 			}
 		});
+	}
+	if(item.previews) {
+		setTimeout(() => {
+			for(let i = 0; i < item.previews.length; i++) {
+				appendPreviewImage(item.previews[i], i);
+			}
+		}, 0);
 	}
 }
 

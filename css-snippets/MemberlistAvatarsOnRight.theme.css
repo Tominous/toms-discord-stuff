@@ -1,0 +1,4 @@
+[class*=members] [class*=content]{flex-direction:row-reverse}
+[class*=members] [class*=avatarWrapper]{margin-right:0;left:0}
+[class*=members] [class*=memberInner]{width:160px;margin-right:10px}
+#app-mount [class*=members] [class*=typing]{left:10px}

@@ -9,7 +9,15 @@
 	--primary-color: #9AADD2;
 	--plugin-color: #00a2ff;
 	--theme-color: #cd29ff;
+	--snippet-color: #ff29d1;
 	--bot-color: #2ada9f;
+}
+
+.select {
+	-webkit-user-select: all;
+	-moz-user-select: all;
+	-ms-user-select: all;
+	user-select: all;
 }
 
 #root::before {
@@ -115,11 +123,26 @@ footer .close-button {
 }
 
 .divider-label {
-	font-size: 45px !important;
+	font-size: 45px;
+	margin-top: 40px;
+}
+
+.divider-label .tooltip {
+	width: 500px;
+}
+
+.divider-label span {
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.divider-label:hover span {
+	opacity: 1;
 }
 
 .divider-label.plugin { text-shadow: var(--plugin-color) 2px 2px 5px }
 .divider-label.theme { text-shadow: var(--theme-color) 2px 2px 5px }
+.divider-label.css-snippet { text-shadow: var(--snippet-color) 2px 2px 5px }
 .divider-label.bot { text-shadow: var(--bot-color) 2px 2px 5px }
 
 .item-list {
@@ -140,16 +163,29 @@ footer .close-button {
 	border-bottom: 3px solid black;
 }
 
-.window.plugin { background:url(./img/pcbg.png) }
-.window.theme { background:url(./img/tcbg.png) }
-.window.bot { background:url(./img/bcbg.png) }
+.window::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: url(./img/popoutbg.png);
+}
+
+.window.theme::before { filter:hue-rotate(78deg) saturate(150%) }
+.window.css-snippet::before { filter:hue-rotate(90deg) saturate(150%) }
+.window.bot::before { filter:hue-rotate(300deg) saturate(70%) brightness(1.2) }
 .plugin { border-color:var(--plugin-color) }
 .theme { border-color:var(--theme-color) }
+.css-snippet { border-color:var(--snippet-color) }
 .bot { border-color:var(--bot-color) }
 .plugin .tooltip { background:var(--plugin-color) }
 .plugin .tooltip::after { border-top-color: var(--plugin-color) }
 .theme .tooltip { background:var(--theme-color) }
 .theme .tooltip::after { border-top-color: var(--theme-color) }
+.css-snippet .tooltip { background:var(--snippet-color) }
+.css-snippet .tooltip::after { border-top-color: var(--snippet-color) }
 .bot .tooltip { background:var(--bot-color) }
 .bot .tooltip::after { border-top-color: var(--bot-color) }
 
@@ -232,11 +268,6 @@ footer .close-button {
 	right: 15px;
 }
 
-.divider-label {
-	font-size: 30px;
-	margin-top: 40px;
-}
-
 .tooltip {
 	background-color: #131313;
 	border-radius: 5px;
@@ -305,6 +336,7 @@ footer .close-button {
 
 .plugin .popout-button:hover { color:var(--plugin-color) }
 .theme .popout-button:hover { color:var(--theme-color) }
+.css-snippet .popout-button:hover { color:var(--snippet-color) }
 .bot .popout-button:hover { color:var(--bot-color) }
 
 video {

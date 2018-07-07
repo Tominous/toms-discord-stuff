@@ -1,0 +1,1 @@
+#app-mount [class*=avatar]:not([class*=status]),[class*=image][class*=small],[class*=mask]{-webkit-mask:none;border-radius:5px}
