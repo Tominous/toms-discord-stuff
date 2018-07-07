@@ -79,12 +79,8 @@ function buildItemsList() {
 				<div class="item-description">${item.description}</div>
 				<div class="item-action-buttons">
 					<span class="material-icons item-action-button has-tooltip" data-tooltip="More info">more_horiz</span>
-					<span class="material-icons item-action-button has-tooltip" data-tooltip="Reveal code" onclick="fetch('./css-snippets/${item.filename}').then(d => d.text()).then(c => {
-						const desc = this.parentElement.parentElement.getElementsByClassName('item-description')[0];
-						desc.innerText = c;
-						desc.classList.add('select');
-					})">code</span>
-					<span class="material-icons item-action-button has-tooltip" data-tooltip="Download as theme" onclick="fetch('./css-snippets/${item.filename}').then(d => d.text()).then(c => saveAs(new Blob([c], { type : 'text/css' }), '${item.filename}'))">get_app</span>
+					<span class="material-icons item-action-button has-tooltip" data-tooltip="Reveal code">code</span>
+					<span class="material-icons item-action-button has-tooltip" data-tooltip="Download as theme">get_app</span>
 				</div>
 				<span class="item-idx-label">#${i + 1}</span>
 			`;
@@ -92,6 +88,14 @@ function buildItemsList() {
 			element.dataset.idx = i + 1;
 			let actionButtons = element.getElementsByClassName("item-action-button"), actionTooltip = element.getElementsByClassName("item-action-tooltip")[0];
 			actionButtons[0].onclick = () => openPop(item, "css-snippet");
+			actionButtons[1].onclick = () => fetch("./css-snippets/" + item.filename).then(d => d.text()).then(code => {
+				const desc = element.getElementsByClassName("item-description")[0];
+				desc.innerText = code;
+				desc.classList.add("select");
+			});
+			actionButtons[2].onclick = () => fetch("./css-snippets/" + item.filename).then(d => d.text()).then(code => {
+				window.saveAs(new Blob([`//META{"name":"${item.filename.split(".")[0]}","description":"${item.description}","author":"Metalloriff","version":"1.0"}*//\n${code}`], { type : "text/css" }), item.filename);
+			})
 			insertFlags(item, element.getElementsByClassName("item-flags")[0]);
 			snippets.appendChild(element);
 		}
