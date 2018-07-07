@@ -163,7 +163,7 @@ footer .close-button {
 	border-bottom: 3px solid black;
 }
 
-.window::before {
+.item-popout > .window::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -171,6 +171,7 @@ footer .close-button {
 	bottom: 0;
 	left: 0;
 	background: url(./img/popoutbg.png);
+	border-radius: 5px;
 }
 
 .window.theme::before { filter:hue-rotate(78deg) saturate(150%) }
