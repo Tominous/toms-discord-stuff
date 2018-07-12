@@ -205,6 +205,14 @@
 		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/DetailedServerTooltips.plugin.js",
 		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/DST/Preview/",
 		"flags" : {}
+	},
+	{
+		"name" : "Double Click Voice Channels",
+		"description" : "Requires you to double click voice channels to connect to them.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/DoubleClickVoiceChannels.plugin.js",
+		"flags" : {
+			"new" : true
+		}
 	}
 ],
 "themes" : [
