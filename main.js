@@ -185,8 +185,8 @@ function openPop(item, type) {
 				<div class="popout-label" style="margin-top:20px;">${item.description}</div>
 				${type == "plugin" ? `<div id="popout-item-version" class="popout-label" style="margin-top:50px;">Fetching version...</div>` : ""}
 				<div class="popout-label" style="margin-top:20px;">${item.note ? "Note: " + item.note : ""}</div>
-				<div class="popout-label popout-button" style="margin-top:50px;">Source</div>
-				<div class="popout-label popout-button">Download</div>
+				<div class="popout-label popout-button" style="margin-top:50px;" onclick="window.open('${item.source}');">Source</div>
+				<div class="popout-label popout-button" onclick="window.open('https://betterdiscord.net/ghdl/?url=${item.source}');">Download</div>
 				<div class="preview-images" style="margin-top:-5px">
 					<div class="popout-label" style="position:absolute;top:-25px;">Fetching previews...</div>
 					<div class="scroll-wrapper"><div class="scroller" data-simplebar></div></div>
