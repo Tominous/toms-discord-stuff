@@ -27,3 +27,4 @@
 	box-shadow: none;
 	background: transparent;
 }
+[class*=channels] [class*=container] [class*=status]{pointer-events:none}
