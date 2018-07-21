@@ -213,6 +213,15 @@
 		"flags" : {
 			"new" : true
 		}
+	},
+	{
+		"name" : "Image Browser",
+		"description" : "Displays a next and previous button on image popouts for browsing through images in a channel.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/ImageBrowser.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/IB/Preview/",
+		"flags" : {
+			"new" : true
+		}
 	}
 ],
 "themes" : [
