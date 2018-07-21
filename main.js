@@ -7,7 +7,7 @@ let allItems;
 
 function buildItemsList() {
 
-	fetch("items.json").then(r => r.json()).then(items => {
+	fetch("items.json", { cache : "no-cache" }).then(r => r.json()).then(items => {
 
 		const plugins = document.getElementsByClassName("divider plugins")[0];
 
