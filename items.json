@@ -222,6 +222,15 @@
 		"flags" : {
 			"new" : true
 		}
+	},
+	{
+		"name" : "Custom Js",
+		"description" : "Allows you to specify a custom JavaScript file similar to custom CSS.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/CustomJs.plugin.js",
+		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/CJS/Preview/",
+		"flags" : {
+			"new" : true
+		}
 	}
 ],
 "themes" : [
