@@ -210,18 +210,14 @@
 		"name" : "Double Click Voice Channels",
 		"description" : "Requires you to double click voice channels to connect to them.",
 		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/DoubleClickVoiceChannels.plugin.js",
-		"flags" : {
-			"new" : true
-		}
+		"flags" : {}
 	},
 	{
 		"name" : "Image Browser",
 		"description" : "Displays a next and previous button on image popouts for browsing through images in a channel.",
 		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/ImageBrowser.plugin.js",
 		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/IB/Preview/",
-		"flags" : {
-			"new" : true
-		}
+		"flags" : {}
 	},
 	{
 		"name" : "Custom Js",
@@ -230,6 +226,15 @@
 		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/CJS/Preview/",
 		"flags" : {
 			"new" : true
+		}
+	},
+	{
+		"name" : "Prevent Spotify Auto Pause",
+		"description" : "Prevents Discord from automatically pausing Spotify after transmitting your microphone for 30 seconds.",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/PreventSpotifyAutoPause.plugin.js",
+		"flags" : {
+			"new" : true,
+			"requested" : true
 		}
 	}
 ],
