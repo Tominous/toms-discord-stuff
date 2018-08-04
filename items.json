@@ -148,7 +148,7 @@
 	{
 		"name" : "Open Links In Discord",
 		"description" : "Opens links in a new window in Discord, instead of in your web browser.",
-		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/MessageLogger.plugin.js",
+		"source" : "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/OpenLinksInDiscord.plugin.js",
 		"preview" : "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Assets/OLID/Preview/",
 		"note" : "You can hold shift (default) to open links normally.",
 		"flags" : {}
