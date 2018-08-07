@@ -208,7 +208,7 @@ function openPop(item, type) {
 			popout.remove();
 			document.getElementsByClassName("header-buttons")[0].style.display = "";
 			document.getElementsByTagName("header")[0].style.zIndex = "2";
-		}, 200);	
+		}, 200);
 	};
 	window.getElementsByClassName("close-button")[0].onclick = close;
 	popout.firstElementChild.onclick = close;
@@ -249,7 +249,7 @@ function openPop(item, type) {
 	if(item.preview) {
 		fetch(item.preview + "README.md").then(r => r.text()).then(data => {
 			previewLabel.style.top = "-15px";
-			const images = Array.filter(data.split("(").join(")").split(")"), i => i.indexOf(".") != -1);
+			const images = data.split("(").join(")").split(")").filter(i => i.indexOf(".") != -1);
 			for(let i = 0; i < images.length; i++) {
 				clearTimeout(imageFailTimeout);
 				appendPreviewImage(item.preview + images[i], i);
@@ -290,7 +290,7 @@ function openImagePreview(url) {
 	const close = () => {
 		popout.lastElementChild.style.animation = "zoom-in 0.2s reverse";
 		popout.style.animation = "fade-in 0.2s reverse";
-		setTimeout(() => popout.remove(), 200);	
+		setTimeout(() => popout.remove(), 200);
 	};
 	popout.lastElementChild.appendChild(img);
 	(async function(){
@@ -338,7 +338,7 @@ function openVideoPreview(url) {
 	const close = () => {
 		popout.lastElementChild.style.animation = "zoom-in 0.2s reverse";
 		popout.style.animation = "fade-in 0.2s reverse";
-		setTimeout(() => popout.remove(), 200);	
+		setTimeout(() => popout.remove(), 200);
 	};
 	popout.lastElementChild.appendChild(vid);
 	vid.onloadedmetadata = async function(){
