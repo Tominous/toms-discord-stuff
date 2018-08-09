@@ -244,6 +244,14 @@
 				"new": true,
 				"requested": true
 			}
+		},
+		{
+			"name": "Suppress User Mentions",
+			"description": "Allows you to suppress mentions from specified users without blocking them.",
+			"source": "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/SuppressUserMentions.plugin.js",
+			"flags": {
+				"new": true
+			}
 		}
   ],
   "themes": [{
