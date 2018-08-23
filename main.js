@@ -93,9 +93,8 @@ function buildItemsList() {
 				desc.innerText = code;
 				desc.classList.add("select");
 			});
-			actionButtons[2].onclick = () => fetch("./css-snippets/" + item.filename).then(d => d.text()).then(code => {
-				window.saveAs(new Blob([`//META{"name":"${item.filename.split(".")[0]}","description":"${item.description}","author":"Metalloriff","version":"1.0"}*//\n${code}`], { type : "text/css" }), item.filename);
-			})
+			actionButtons[2].onclick = () => 
+				window.saveAs(new Blob([`//META{"name":"${item.filename.split(".")[0]}","description":"${item.description}","author":"Metalloriff","version":"1.0"}*//\n@import url(https://raw.githubusercontent.com/Metalloriff/toms-discord-stuff/master/css-snippets/${item.filename})`], { type : "text/css" }), item.filename);
 			insertFlags(item, element.getElementsByClassName("item-flags")[0]);
 			snippets.appendChild(element);
 		}

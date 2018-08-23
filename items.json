@@ -332,13 +332,33 @@
       "description": "Adds backdrops to most popouts (user popouts, emoji picker, etc.) similar to the backdrop on user profiles and the image viewer.",
       "filename": "MorePopoutBackdrops.theme.css",
       "flags": {}
-    }
+	},
+	{
+		"name": "Better Home Button",
+		"description": "Removes the background of the home button and adds a glow upon hover, and a colored glow when selected.",
+		"filename": "BetterHomeButton.css",
+		"previews": ["https://i.imgur.com/N7NXaKO.png"],
+		"flags": {
+			"new": true
+		}
+	}
   ],
-  "bots": [{
-    "name": "Relatable Bot",
-    "description": "Need a highly annoying discount Dad Bot? Then add Relatable Bot™ to your server today! <span style=\"font-size:10px;font-style:italic\">Patent pending.</span>",
-    "source": "https://github.com/Metalloriff/RelatableBot/blob/master/relatable-bot.js",
-    "inviteLink": "https://discordapp.com/api/oauth2/authorize?client_id=431835277992919040&permissions=604097600&scope=bot",
-    "flags": {}
-  }]
+  "bots": [
+		{
+			"name": "Relatable Bot",
+			"description": "Need a highly annoying discount Dad Bot? Then add Relatable Bot™ to your server today! <span style=\"font-size:10px;font-style:italic\">Patent pending.</span>",
+			"source": "https://github.com/Metalloriff/RelatableBot",
+			"inviteLink": "https://discordapp.com/api/oauth2/authorize?client_id=431835277992919040&permissions=604097600&scope=bot",
+			"flags": {}
+		},
+		{
+			"name": "Dice Bot",
+			"description": "A Discord bot for fetching random server and bot invites from <a href=\"https://discordbots.org\">https://discordbots.org</a>",
+			"source": "https://github.com/Metalloriff/DiceBot",
+			"inviteLink": "https://discordapp.com/oauth2/authorize?client_id=479853168436576257&permissions=2048&scope=bot",
+			"flags": {
+				"new": true
+			}
+		}
+	]
 }
