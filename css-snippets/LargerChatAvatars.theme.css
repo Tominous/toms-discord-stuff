@@ -1,1 +1,3 @@
-.chat .avatar-large{width:70px;height:70px;background-size:cover}
+[class^=chat] [class*=wrapper][class*=avatar], [class^=chat] [class*=image][class*=large]{width:70px;height:70px;background-size:cover}
+[class^=chat] [class^=message] [class*=content]{margin-left:110px}
+[class^=messages] > [class^=container] > [class^=message]:first-child{padding-bottom:30px}
