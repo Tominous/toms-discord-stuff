@@ -1,1 +1,1 @@
-.guild,.guild-inner{border-radius:5px !important}
+[class^=guilds] > [class^=guild],[class^=guild] [class^=guildInner]{border-radius:5px !important}
